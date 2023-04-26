@@ -1,0 +1,97 @@
+admin
+--------------------------
+id = int(11)
+username = varchar(255)
+password = varchar(255)
+name_surname = varchar(255)
+phone = varchar(255)
+email = varchar(255)
+status = tinyint(4)
+
+address
+--------------------------
+id = int(11)
+type = tinyint(4) [0 = Admin] [1 = Teacher] [2 = student]
+user_id = int(11)
+address = text
+
+teacher
+--------------------------
+id = int(11)
+username = varchar(255)
+password = varchar(255)
+name_surname = varchar(255)
+phone = varchar(255)
+email = varchar(255)
+department_id = int(11)
+title_id = int(11)
+faculty_id = int(11)
+create_user = id(11)
+create_date = datetime
+status = tinyint(4)
+
+faculty
+--------------------------
+id = int(11)
+faculty = varchar(255)
+create_user = int(11)
+create_date = datetime
+
+department
+--------------------------
+id = int(11)
+faculty_id = int(11)
+department = varchar(255)
+create_user = int(11)
+create_date = datetime
+
+teacher_title
+--------------------------
+id = int(11)
+department_id = int(11)
+title = varchar(255)
+create_user = int(11)
+create_date = datetime
+
+student
+--------------------------
+id = int(11)
+username = varchar(255)
+password = varchar(255)
+name_surname = varchar(255)
+phone = varchar(255)
+email = varchar(255)
+birth_date = datetime
+identity_id = int(11)
+faculty_id = tiny(1)
+department_id = int(11)
+period_year = year
+class = tinyint(4)
+status = tinyint(4)
+
+lesson
+--------------------------
+id = int(11)
+faculty_id = tinyint(4)
+department_id = int(11)
+lesson = varchar(255)
+teachers_id = int(11)
+
+grades
+--------------------------
+id = int(11)
+lesson_id = int(11)
+student_id = int(11)
+homework_grade = tinyint(4)
+midterm_grade = tinyint(4)
+final_grade = tinyint(4)
+quiz_grade = tinyint(4)
+attendance = tinyint(4)
+create_date = datetime
+
+lesson_schedule
+--------------------------
+id = int(11)
+lesson_id = int(11)
+schedule_date = datetime
+
